@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#1d4ed8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Govt Seva Portal – All Government Services in One Place</title>
+<meta name="description" content="Independent information portal linking to official Indian government services: documents, certificates, schemes and status checks.">
+<meta property="og:title" content="Govt Seva Portal">
+<meta property="og:description" content="Find official Indian government service links in one place.">
+<style>
+:root{--bg:#f6f8fb;--sf:#fff;--tx:#14213d;--mu:#5b6678;--bd:#e2e8f0;--ac:#1d4ed8;--ac2:#e8eefc;--ok:#15803d;--wa:#b45309;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--sf:#131c2e;--tx:#e8edf7;--mu:#9aa6bb;--bd:#24304a;--ac:#6ea0ff;--ac2:#1a2744;--ok:#4ade80;--wa:#fbbf24}}
+:root[data-theme="dark"]{--bg:#0b1220;--sf:#131c2e;--tx:#e8edf7;--mu:#9aa6bb;--bd:#24304a;--ac:#6ea0ff;--ac2:#1a2744;--ok:#4ade80;--wa:#fbbf24}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Devanagari","Noto Sans Bengali",sans-serif;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
+a{color:inherit}
+.w{max-width:1120px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--sf);border-bottom:1px solid var(--bd);z-index:11}
+.hb{display:flex;align-items:center;gap:12px;padding:10px 0;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.15rem;color:var(--ac);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:6px 10px;border-radius:8px;text-decoration:none;font-size:.9rem;color:var(--mu)}
+nav a:hover{background:var(--ac2);color:var(--ac)}
+select,button,input{font:inherit;color:var(--tx)}
+select,.ib{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:6px 10px;cursor:pointer}
+.hero{padding:44px 0 24px;text-align:center}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem);margin:0 0 10px;line-height:1.15}
+.hero p{color:var(--mu);max-width:680px;margin:0 auto 22px}
+.sb{display:flex;max-width:720px;margin:0 auto;background:var(--sf);border:2px solid var(--bd);border-radius:14px;padding:4px 14px;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.sb:focus-within{border-color:var(--ac)}
+.sb input{flex:1;border:0;background:none;padding:12px 6px;font-size:1rem;outline:0;min-width:0}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.chip{border:1px solid var(--bd);background:var(--sf);border-radius:99px;padding:6px 14px;cursor:pointer;font-size:.88rem}
+.chip:hover,.chip.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px;align-items:center}
+.fl .mu{color:var(--mu);font-size:.9rem;margin-left:auto}
+h2{margin:30px 0 12px;font-size:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;animation:up .35s ease both;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.08)}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.card{animation:none;transition:none}}
+.card h3{margin:0;font-size:1.05rem}
+.meta{display:flex;gap:6px;flex-wrap:wrap;font-size:.75rem}
+.tag{background:var(--ac2);color:var(--ac);border-radius:6px;padding:2px 8px}
+.card p{margin:0;color:var(--mu);font-size:.9rem;flex:1}
+.bt{display:flex;gap:6px;flex-wrap:wrap}
+.bt a{font-size:.82rem;padding:6px 10px;border-radius:8px;text-decoration:none;border:1px solid var(--ac);color:var(--ac)}
+.bt a.p{background:var(--ac);color:#fff}
+.bt a:hover{opacity:.85}
+.na{font-size:.82rem;color:var(--wa)}
+.vs{font-size:.74rem;color:var(--mu)}
+.empty{padding:30px;text-align:center;color:var(--mu);background:var(--sf);border:1px dashed var(--bd);border-radius:14px}
+.note{background:var(--ac2);border-radius:12px;padding:12px 16px;font-size:.88rem;margin-top:22px}
+footer{margin-top:40px;background:var(--sf);border-top:1px solid var(--bd);padding:24px 0;font-size:.88rem;color:var(--mu)}
+footer a{margin-right:14px}
+.ad{margin:18px 0;text-align:center;min-height:0}.ad small{display:block;color:var(--mu);font-size:.7rem;margin-bottom:4px}
+.pol{display:none;background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:6px 20px 16px;margin-top:20px;font-size:.92rem}.pol.on{display:block}body.pg .hero,body.pg #services{display:none}.pol h2{font-size:1.2rem}.pol a{color:var(--ac)}
+.cb{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:680px;margin:0 auto;background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:30;font-size:.88rem;display:none}.cb.show{display:block}.cb .bt{margin-top:10px}.cb button{font-size:.85rem;padding:6px 14px;border-radius:8px;border:1px solid var(--ac);background:none;color:var(--ac);cursor:pointer}.cb button.p{background:var(--ac);color:#fff}
+</style>
+</head>
+<body>
+<header><div class="w hb">
+<a class="logo" href="#top">🏛️ Govt Seva Portal</a>
+<nav><a href="#services" data-i="n_all">All Services</a><a href="#docs" data-i="n_docs">Documents</a><a href="#schemes" data-i="n_sch">Government Schemes</a><a href="#state" data-i="n_state">State Services</a><a href="#about" data-i="n_about">About Us</a></nav>
+<select id="lang" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="bn">বাংলা</option><option value="as">অসমীয়া</option><option value="gu">ગુજરાતી</option><option value="kn">ಕನ್ನಡ</option><option value="ml">മലയാളം</option><option value="mr">मराठी</option><option value="ne">नेपाली</option><option value="or">ଓଡ଼ିଆ</option><option value="pa">ਪੰਜਾਬੀ</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option><option value="ur">اردو</option></select>
+<button class="ib" id="theme" aria-label="Toggle dark mode">🌓</button>
+</div></header>
+
+<main id="top" class="w">
+<section class="hero">
+<h1 data-i="h1">All Government Services in One Place</h1>
+<p data-i="sub">Apply for documents, download certificates, check application status and access government schemes through verified official portals.</p>
+<div class="sb"><input id="q" type="search" autocomplete="off" placeholder="Search Aadhaar, PAN, Voter ID, Driving Licence..." aria-label="Search services"></div>
+<div class="chips" id="pop"></div>
+</section>
+
+<section id="services">
+<div class="fl">
+<select id="cat" aria-label="Category"></select>
+<select id="st" aria-label="State"></select>
+<select id="dept" aria-label="Department"></select>
+<select id="sort"><option value="az">A → Z</option><option value="za">Z → A</option></select>
+<span class="mu" id="count"></span>
+</div>
+<div class="grid" id="list"></div>
+<div class="ad" id="ad1" hidden><small>Advertisement</small></div>
+<h2 id="state" data-i="n_state">State Services</h2>
+<div class="chips" id="states" style="justify-content:flex-start"></div>
+<p class="note" id="stmsg"></p>
+</section>
+
+<section id="about" class="pol"><h2>About Us</h2><p>Govt Seva Portal is an independent information website that collects links to official Indian government services in one place. We do not process applications, issue documents or act on behalf of any government body.</p></section>
+
+<section id="disclaimer" class="pol"><h2>Disclaimer</h2>
+<p>Govt Seva Portal is <strong>not</strong> an official government website and is <strong>not affiliated with, endorsed by or connected to</strong> any government department or agency. All buttons open official websites in a new tab. Links, fees and procedures can change, so always confirm details on the official site. We are not responsible for content on external websites. Advertisements shown on this site are provided by third parties and are not government notices or endorsements.</p></section>
+
+<section id="privacy" class="pol"><h2>Privacy Policy</h2>
+<p><strong>What we never collect:</strong> Aadhaar numbers, PAN numbers, OTPs, bank passwords, government portal login details or identity documents. Please never share these with any website that asks for them outside an official .gov.in or .nic.in portal.</p>
+<p><strong>Information we may handle:</strong> your search text stays in your browser. We do not run user accounts. Your theme, language and cookie choice may be saved in your browser storage.</p>
+<p><strong>Advertising and cookies:</strong> if you accept cookies, we may show ads served by Google AdSense. Google and its partners use cookies to serve and measure ads, including ads based on earlier visits to this or other sites. Read <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from partner sites</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a>. You can manage personalised ads in <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>. If you decline, no ads are loaded.</p>
+<p><strong>Your choices:</strong> you can change your cookie choice any time using <a href="#cookies" id="cset">Cookie settings</a> in the footer, or clear your browser data.</p>
+<p><strong>Contact:</strong> [Site owner: add your contact email here before launch.]</p></section>
+
+<section id="cookie-policy" class="pol"><h2>Cookie Policy</h2>
+<p>Cookies are small files stored in your browser. This site itself only saves your theme, language and cookie choice in your browser storage. If you click Accept on the cookie banner, Google AdSense and its partners may set cookies to show and measure ads. If you click Decline, no ad scripts are loaded. You can change your choice any time from “Cookie settings” in the footer. See also our <a href="#privacy">Privacy Policy</a> and <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">how Google uses cookies</a>.</p></section>
+
+<section id="contact" class="pol"><h2>Contact Us</h2>
+<p>For corrections, broken-link reports or privacy questions, contact the site owner at: <strong>[add your contact email here before launch]</strong>.</p>
+<p>We cannot help with applications, status or complaints about government services. Please use the official website or helpline of the relevant department.</p></section>
+
+<section id="terms" class="pol"><h2>Terms &amp; Conditions</h2>
+<p>By using this site you agree that it is provided for general information only, without any warranty of accuracy or availability. You use external official websites at your own responsibility and under their own terms. We may update or remove content and links at any time. Do not use this site for unlawful purposes or to impersonate any government body.</p></section>
+</main>
+
+<footer><div class="w">
+<p><a href="#about">About Us</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a><a href="#disclaimer">Disclaimer</a><a href="#cookie-policy">Cookie Policy</a><a href="#contact">Contact Us</a><a href="#cookies" id="cset2">Cookie settings</a><a href="https://www.india.gov.in/" target="_blank" rel="noopener">National Portal of India</a></p>
+<p>© 2026 Govt Seva Portal. Independent information portal, not an official government website.</p>
+</div></footer>
+
+<div class="cb" id="cb" role="dialog" aria-label="Cookie consent"><p style="margin:0">We use cookies from Google AdSense to show ads. Accepting lets Google and partners use cookies. Declining means no ads are loaded. See our <a href="#privacy">Privacy Policy</a>.</p><div class="bt"><button class="p" id="cy">Accept</button><button id="cn">Decline</button></div></div>
+<script>
+const D=[
+// id,name,cat,state,dept,desc,{apply,correct,download,status},source,verified
+["aadhaar","Aadhaar Card","Identity Documents","All India","UIDAI","Unique 12-digit identity number: enrolment, updates, e-Aadhaar download.",{apply:"https://uidai.gov.in/",correct:"https://myaadhaar.uidai.gov.in/",download:"https://myaadhaar.uidai.gov.in/",status:"https://myaadhaar.uidai.gov.in/"},"https://uidai.gov.in/"],
+["pan","PAN Card","Identity Documents","All India","Income Tax Department","Permanent Account Number services including instant e-PAN.",{apply:"https://www.incometax.gov.in/iec/foportal/",correct:"https://www.incometax.gov.in/iec/foportal/",download:"https://www.incometax.gov.in/iec/foportal/",status:"https://www.incometax.gov.in/iec/foportal/"},"https://www.incometax.gov.in/iec/foportal/"],
+["voter","Voter ID Card","Identity Documents","All India","Election Commission of India","Register, correct details, download e-EPIC and track applications.",{apply:"https://voters.eci.gov.in/",correct:"https://voters.eci.gov.in/",download:"https://voters.eci.gov.in/",status:"https://voters.eci.gov.in/"},"https://voters.eci.gov.in/"],
+["eshram","e-Shram Card","Identity Documents","All India","Ministry of Labour & Employment","Registration for unorganised workers.",{apply:"https://eshram.gov.in/"},"https://eshram.gov.in/"],
+["abha","ABHA Health Card","Health","All India","National Health Authority","Create your Ayushman Bharat Health Account number.",{apply:"https://abha.abdm.gov.in/"},"https://abha.abdm.gov.in/"],
+["udid","Disability Certificate / UDID Card","Identity Documents","All India","Dept. of Empowerment of Persons with Disabilities","Unique Disability ID application and status.",{apply:"https://www.swavlambancard.gov.in/",status:"https://www.swavlambancard.gov.in/"},"https://www.swavlambancard.gov.in/"],
+["dl","Driving Licence","Driving & Vehicle","All India","Ministry of Road Transport & Highways","Learner and permanent licence, renewal, duplicate and correction via Sarathi.",{apply:"https://sarathi.parivahan.gov.in/",correct:"https://sarathi.parivahan.gov.in/",status:"https://sarathi.parivahan.gov.in/"},"https://parivahan.gov.in/"],
+["rc","Vehicle Registration & Ownership Transfer","Driving & Vehicle","All India","Ministry of Road Transport & Highways","Registration certificate and transfer services via Vahan.",{apply:"https://vahan.parivahan.gov.in/",status:"https://vahan.parivahan.gov.in/"},"https://parivahan.gov.in/"],
+["passport","Passport (New, Renewal, Correction)","Passport","All India","Ministry of External Affairs","Apply, renew, track status and check police verification.",{apply:"https://www.passportindia.gov.in/",correct:"https://www.passportindia.gov.in/",status:"https://www.passportindia.gov.in/"},"https://www.passportindia.gov.in/"],
+["birthdeath","Birth & Death Certificate","Certificates","All India","Registrar General of India","Civil registration system for birth and death records.",{apply:"https://crsorgi.gov.in/",download:"https://crsorgi.gov.in/",status:"https://crsorgi.gov.in/"},"https://crsorgi.gov.in/"],
+["income","Income Certificate","Certificates","All India","State Revenue Departments","Issued by your state. Use the official state portal or e-District.",{},"https://www.india.gov.in/"],
+["caste","Caste / SC / ST / OBC Certificate","Certificates","All India","State Revenue Departments","Issued by your state. Use the official state portal or e-District.",{},"https://www.india.gov.in/"],
+["char","Character Certificate","Certificates","All India","State / Police Departments","Issuing authority differs by state.",{},null],
+["ration","Ration Card","Food & Ration","All India","Dept. of Food & Public Distribution","National Food Security Act information. Applications run through state portals.",{},"https://nfsa.gov.in/"],
+["land","Land Records (West Bengal)","Land & Property","West Bengal","Land & Land Reforms Dept., WB","Banglarbhumi: land records, mutation and land tax.",{apply:"https://banglarbhumi.gov.in/",status:"https://banglarbhumi.gov.in/"},"https://banglarbhumi.gov.in/"],
+["nsp","National Scholarship Portal","Education","All India","Ministry of Education","Central and state scholarships for students.",{apply:"https://scholarships.gov.in/",status:"https://scholarships.gov.in/"},"https://scholarships.gov.in/"],
+["digilocker","DigiLocker (Marksheets & Certificates)","Education","All India","MeitY","Access issued documents and academic records digitally.",{download:"https://www.digilocker.gov.in/"},"https://www.digilocker.gov.in/"],
+["jobs","National Career Service (Employment)","Government Jobs","All India","Ministry of Labour & Employment","Employment registration and job listings.",{apply:"https://www.ncs.gov.in/"},"https://www.ncs.gov.in/"],
+["wbjobs","Employment Bank, West Bengal","Government Jobs","West Bengal","Dept. of Labour, WB","State employment exchange registration.",{apply:"https://employmentbankwb.gov.in/"},"https://employmentbankwb.gov.in/"],
+["pmay","PMAY (Housing for All)","Government Schemes","All India","Ministry of Housing & Urban Affairs","Housing assistance for eligible families.",{apply:"https://pmaymis.gov.in/"},"https://pmaymis.gov.in/"],
+["kisan","PM-KISAN","Government Schemes","All India","Ministry of Agriculture","Income support for farmer families. Check beneficiary status and eKYC.",{apply:"https://pmkisan.gov.in/",status:"https://pmkisan.gov.in/"},"https://pmkisan.gov.in/"],
+["pmjay","Ayushman Bharat (PM-JAY)","Government Schemes","All India","National Health Authority","Health cover for eligible families. Check eligibility and find hospitals.",{apply:"https://pmjay.gov.in/"},"https://pmjay.gov.in/"],
+["ujjwala","PM Ujjwala Yojana","Government Schemes","All India","Ministry of Petroleum & Natural Gas","LPG connections for eligible households.",{apply:"https://www.pmuy.gov.in/"},"https://www.pmuy.gov.in/"],
+["nrega","MGNREGA Job Card","Government Schemes","All India","Ministry of Rural Development","Rural employment guarantee; job card and muster roll details.",{status:"https://nrega.nic.in/"},"https://nrega.nic.in/"],
+["vish","PM Vishwakarma","Government Schemes","All India","Ministry of MSME","Support for traditional artisans and craftspeople.",{apply:"https://pmvishwakarma.gov.in/"},"https://pmvishwakarma.gov.in/"],
+["jandhan","PM Jan Dhan Yojana","Government Schemes","All India","Dept. of Financial Services","Basic bank accounts for all households.",{},"https://pmjdy.gov.in/"],
+["fasal","Crop Insurance (PMFBY)","Agriculture","All India","Ministry of Agriculture","Pradhan Mantri Fasal Bima Yojana.",{apply:"https://pmfby.gov.in/"},"https://pmfby.gov.in/"],
+["soil","Soil Health Card","Agriculture","All India","Ministry of Agriculture","Soil test reports and crop recommendations.",{download:"https://soilhealth.dac.gov.in/"},"https://soilhealth.dac.gov.in/"],
+["ss","Swasthya Sathi","West Bengal","West Bengal","Dept. of Health, WB","State health insurance scheme.",{apply:"https://swasthyasathi.gov.in/"},"https://swasthyasathi.gov.in/"],
+["kanya","Kanyashree","West Bengal","West Bengal","Dept. of Women & Child Development, WB","Education support for girls.",{apply:"https://wbkanyashree.gov.in/"},"https://wbkanyashree.gov.in/"],
+["khadya","Khadya Sathi (WB Ration)","West Bengal","West Bengal","Dept. of Food & Supplies, WB","State public distribution services.",{},"https://food.wb.gov.in/"],
+["lb","Lakshmir Bhandar","West Bengal","West Bengal","Government of West Bengal","State income support scheme. Check the state portal for the current process.",{},"https://wb.gov.in/"],
+["yuva","Yuvashree","West Bengal","West Bengal","Government of West Bengal","Official link not added yet.",{},null],
+["krishak","Krishak Bandhu","West Bengal","West Bengal","Dept. of Agriculture, WB","Official link not added yet.",{},null]
+].map(r=>({id:r[0],name:r[1],cat:r[2],state:r[3],dept:r[4],desc:r[5],urls:r[6],src:r[7],verified:null}));
+const STATES=["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli and Daman and Diu","Delhi","Jammu and Kashmir","Ladakh","Lakshadweep","Puducherry"];
+const T={en:{h1:"All Government Services in One Place",sub:"Apply for documents, download certificates, check application status and access government schemes through verified official portals.",n_all:"All Services",n_docs:"Documents",n_sch:"Government Schemes",n_state:"State Services",n_about:"About Us",apply:"Apply Online",correct:"Correction / Update",download:"Download",status:"Check Status",site:"Official Website",na:"Official Link Not Available Yet",ver:"Link verification: pending manual check",all:"All",res:"services",none:"No matching services found.",stm:"No verified entries for this state yet. Entries are added only after an official link is confirmed."},
+hi:{h1:"सभी सरकारी सेवाएँ एक ही स्थान पर",sub:"आधिकारिक पोर्टलों के माध्यम से दस्तावेज़ों के लिए आवेदन करें, प्रमाणपत्र डाउनलोड करें, आवेदन की स्थिति देखें और सरकारी योजनाओं तक पहुँचें।",n_all:"सभी सेवाएँ",n_docs:"दस्तावेज़",n_sch:"सरकारी योजनाएँ",n_state:"राज्य सेवाएँ",n_about:"हमारे बारे में",apply:"ऑनलाइन आवेदन",correct:"सुधार / अपडेट",download:"डाउनलोड",status:"स्थिति देखें",site:"आधिकारिक वेबसाइट",na:"आधिकारिक लिंक अभी उपलब्ध नहीं",ver:"लिंक सत्यापन: मैन्युअल जाँच लंबित",all:"सभी",res:"सेवाएँ",none:"कोई सेवा नहीं मिली।",stm:"इस राज्य के लिए अभी कोई सत्यापित प्रविष्टि नहीं है।"},
+bn:{h1:"সব সরকারি পরিষেবা এক জায়গায়",sub:"যাচাইকৃত সরকারি পোর্টালের মাধ্যমে নথির জন্য আবেদন করুন, সার্টিফিকেট ডাউনলোড করুন, আবেদনের অবস্থা দেখুন এবং সরকারি প্রকল্পে প্রবেশ করুন।",n_all:"সব পরিষেবা",n_docs:"নথি",n_sch:"সরকারি প্রকল্প",n_state:"রাজ্য পরিষেবা",n_about:"আমাদের সম্পর্কে",apply:"অনলাইনে আবেদন",correct:"সংশোধন / আপডেট",download:"ডাউনলোড",status:"অবস্থা দেখুন",site:"সরকারি ওয়েবসাইট",na:"সরকারি লিংক এখনও উপলব্ধ নয়",ver:"লিংক যাচাই: ম্যানুয়াল পরীক্ষা বাকি",all:"সব",res:"পরিষেবা",none:"কোনো পরিষেবা পাওয়া যায়নি।",stm:"এই রাজ্যের জন্য এখনও কোনো যাচাইকৃত তথ্য নেই।"},
+as:{h1:"সকলো চৰকাৰী সেৱা এটাই ঠাইত",sub:"যাচাই কৰা চৰকাৰী পোৰ্টেলৰ জৰিয়তে নথিৰ বাবে আবেদন কৰক, প্ৰমাণপত্ৰ ডাউনলোড কৰক, আবেদনৰ স্থিতি চাওক আৰু চৰকাৰী আঁচনি লাভ কৰক।",n_all:"সকলো সেৱা",n_docs:"নথিপত্ৰ",n_sch:"চৰকাৰী আঁচনি",n_state:"ৰাজ্যিক সেৱা",n_about:"আমাৰ বিষয়ে",apply:"অনলাইনত আবেদন",correct:"সংশোধন / আপডেট",download:"ডাউনলোড",status:"স্থিতি চাওক",site:"চৰকাৰী ৱেবছাইট",na:"চৰকাৰী লিংক এতিয়াও উপলব্ধ নহয়",all:"সকলো",res:"সেৱা",none:"কোনো সেৱা পোৱা নগ'ল।"},
+gu:{h1:"બધી સરકારી સેવાઓ એક જ સ્થળે",sub:"ચકાસાયેલ સત્તાવાર પોર્ટલ દ્વારા દસ્તાવેજો માટે અરજી કરો, પ્રમાણપત્રો ડાઉનલોડ કરો, અરજીની સ્થિતિ તપાસો અને સરકારી યોજનાઓ મેળવો.",n_all:"બધી સેવાઓ",n_docs:"દસ્તાવેજો",n_sch:"સરકારી યોજનાઓ",n_state:"રાજ્ય સેવાઓ",n_about:"અમારા વિશે",apply:"ઓનલાઇન અરજી",correct:"સુધારો / અપડેટ",download:"ડાઉનલોડ",status:"સ્થિતિ તપાસો",site:"સત્તાવાર વેબસાઇટ",na:"સત્તાવાર લિંક હજુ ઉપલબ્ધ નથી",all:"બધા",res:"સેવાઓ",none:"કોઈ સેવા મળી નથી."},
+kn:{h1:"ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಸೇವೆಗಳು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ",sub:"ಪರಿಶೀಲಿತ ಅಧಿಕೃತ ಪೋರ್ಟಲ್‌ಗಳ ಮೂಲಕ ದಾಖಲೆಗಳಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ, ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ, ಅರ್ಜಿಯ ಸ್ಥಿತಿ ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಸರ್ಕಾರಿ ಯೋಜನೆಗಳನ್ನು ಪಡೆಯಿರಿ.",n_all:"ಎಲ್ಲಾ ಸೇವೆಗಳು",n_docs:"ದಾಖಲೆಗಳು",n_sch:"ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",n_state:"ರಾಜ್ಯ ಸೇವೆಗಳು",n_about:"ನಮ್ಮ ಬಗ್ಗೆ",apply:"ಆನ್‌ಲೈನ್ ಅರ್ಜಿ",correct:"ತಿದ್ದುಪಡಿ / ನವೀಕರಣ",download:"ಡೌನ್‌ಲೋಡ್",status:"ಸ್ಥಿತಿ ನೋಡಿ",site:"ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್",na:"ಅಧಿಕೃತ ಲಿಂಕ್ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ",all:"ಎಲ್ಲಾ",res:"ಸೇವೆಗಳು",none:"ಯಾವುದೇ ಸೇವೆ ಸಿಗಲಿಲ್ಲ."},
+ml:{h1:"എല്ലാ സർക്കാർ സേവനങ്ങളും ഒരിടത്ത്",sub:"പരിശോധിച്ച ഔദ്യോഗിക പോർട്ടലുകൾ വഴി രേഖകൾക്കായി അപേക്ഷിക്കുക, സർട്ടിഫിക്കറ്റുകൾ ഡൗൺലോഡ് ചെയ്യുക, അപേക്ഷയുടെ നില പരിശോധിക്കുക, സർക്കാർ പദ്ധതികൾ നേടുക.",n_all:"എല്ലാ സേവനങ്ങളും",n_docs:"രേഖകൾ",n_sch:"സർക്കാർ പദ്ധതികൾ",n_state:"സംസ്ഥാന സേവനങ്ങൾ",n_about:"ഞങ്ങളെക്കുറിച്ച്",apply:"ഓൺലൈൻ അപേക്ഷ",correct:"തിരുത്തൽ / അപ്ഡേറ്റ്",download:"ഡൗൺലോഡ്",status:"നില പരിശോധിക്കുക",site:"ഔദ്യോഗിക വെബ്സൈറ്റ്",na:"ഔദ്യോഗിക ലിങ്ക് ഇതുവരെ ലഭ്യമല്ല",all:"എല്ലാം",res:"സേവനങ്ങൾ",none:"സേവനങ്ങളൊന്നും കണ്ടെത്തിയില്ല."},
+mr:{h1:"सर्व सरकारी सेवा एकाच ठिकाणी",sub:"पडताळलेल्या अधिकृत पोर्टलद्वारे कागदपत्रांसाठी अर्ज करा, प्रमाणपत्रे डाउनलोड करा, अर्जाची स्थिती तपासा आणि सरकारी योजनांचा लाभ घ्या.",n_all:"सर्व सेवा",n_docs:"कागदपत्रे",n_sch:"सरकारी योजना",n_state:"राज्य सेवा",n_about:"आमच्याबद्दल",apply:"ऑनलाइन अर्ज",correct:"दुरुस्ती / अपडेट",download:"डाउनलोड",status:"स्थिती तपासा",site:"अधिकृत संकेतस्थळ",na:"अधिकृत दुवा अद्याप उपलब्ध नाही",all:"सर्व",res:"सेवा",none:"कोणतीही सेवा आढळली नाही."},
+ne:{h1:"सबै सरकारी सेवाहरू एकै ठाउँमा",sub:"प्रमाणित आधिकारिक पोर्टलहरू मार्फत कागजातका लागि आवेदन दिनुहोस्, प्रमाणपत्र डाउनलोड गर्नुहोस्, आवेदनको स्थिति हेर्नुहोस् र सरकारी योजनाहरू प्राप्त गर्नुहोस्।",n_all:"सबै सेवाहरू",n_docs:"कागजातहरू",n_sch:"सरकारी योजनाहरू",n_state:"राज्य सेवाहरू",n_about:"हाम्रोबारे",apply:"अनलाइन आवेदन",correct:"सच्याउने / अपडेट",download:"डाउनलोड",status:"स्थिति हेर्नुहोस्",site:"आधिकारिक वेबसाइट",na:"आधिकारिक लिङ्क अहिलेसम्म उपलब्ध छैन",all:"सबै",res:"सेवाहरू",none:"कुनै सेवा फेला परेन।"},
+or:{h1:"ସମସ୍ତ ସରକାରୀ ସେବା ଗୋଟିଏ ସ୍ଥାନରେ",sub:"ଯାଞ୍ଚ ହୋଇଥିବା ସରକାରୀ ପୋର୍ଟାଲ ମାଧ୍ୟମରେ ଦଲିଲ ପାଇଁ ଆବେଦନ କରନ୍ତୁ, ପ୍ରମାଣପତ୍ର ଡାଉନଲୋଡ୍ କରନ୍ତୁ, ଆବେଦନର ସ୍ଥିତି ଦେଖନ୍ତୁ ଏବଂ ସରକାରୀ ଯୋଜନା ପାଆନ୍ତୁ।",n_all:"ସମସ୍ତ ସେବା",n_docs:"ଦଲିଲ",n_sch:"ସରକାରୀ ଯୋଜନା",n_state:"ରାଜ୍ୟ ସେବା",n_about:"ଆମ ବିଷୟରେ",apply:"ଅନଲାଇନ୍ ଆବେଦନ",correct:"ସଂଶୋଧନ / ଅପଡେଟ୍",download:"ଡାଉନଲୋଡ୍",status:"ସ୍ଥିତି ଦେଖନ୍ତୁ",site:"ସରକାରୀ ୱେବସାଇଟ୍",na:"ସରକାରୀ ଲିଙ୍କ୍ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ",all:"ସମସ୍ତ",res:"ସେବା",none:"କୌଣସି ସେବା ମିଳିଲା ନାହିଁ।"},
+pa:{h1:"ਸਾਰੀਆਂ ਸਰਕਾਰੀ ਸੇਵਾਵਾਂ ਇੱਕੋ ਥਾਂ",sub:"ਪ੍ਰਮਾਣਿਤ ਸਰਕਾਰੀ ਪੋਰਟਲਾਂ ਰਾਹੀਂ ਦਸਤਾਵੇਜ਼ਾਂ ਲਈ ਅਰਜ਼ੀ ਦਿਓ, ਸਰਟੀਫਿਕੇਟ ਡਾਊਨਲੋਡ ਕਰੋ, ਅਰਜ਼ੀ ਦੀ ਸਥਿਤੀ ਵੇਖੋ ਅਤੇ ਸਰਕਾਰੀ ਸਕੀਮਾਂ ਦਾ ਲਾਭ ਲਓ।",n_all:"ਸਾਰੀਆਂ ਸੇਵਾਵਾਂ",n_docs:"ਦਸਤਾਵੇਜ਼",n_sch:"ਸਰਕਾਰੀ ਸਕੀਮਾਂ",n_state:"ਰਾਜ ਸੇਵਾਵਾਂ",n_about:"ਸਾਡੇ ਬਾਰੇ",apply:"ਆਨਲਾਈਨ ਅਰਜ਼ੀ",correct:"ਸੁਧਾਰ / ਅੱਪਡੇਟ",download:"ਡਾਊਨਲੋਡ",status:"ਸਥਿਤੀ ਵੇਖੋ",site:"ਸਰਕਾਰੀ ਵੈੱਬਸਾਈਟ",na:"ਸਰਕਾਰੀ ਲਿੰਕ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ",all:"ਸਾਰੇ",res:"ਸੇਵਾਵਾਂ",none:"ਕੋਈ ਸੇਵਾ ਨਹੀਂ ਮਿਲੀ।"},
+ta:{h1:"அனைத்து அரசு சேவைகளும் ஒரே இடத்தில்",sub:"சரிபார்க்கப்பட்ட அதிகாரப்பூர்வ தளங்கள் மூலம் ஆவணங்களுக்கு விண்ணப்பிக்கவும், சான்றிதழ்களைப் பதிவிறக்கவும், விண்ணப்ப நிலையைச் சரிபார்க்கவும், அரசுத் திட்டங்களைப் பெறவும்.",n_all:"அனைத்து சேவைகள்",n_docs:"ஆவணங்கள்",n_sch:"அரசுத் திட்டங்கள்",n_state:"மாநில சேவைகள்",n_about:"எங்களைப் பற்றி",apply:"ஆன்லைனில் விண்ணப்பிக்க",correct:"திருத்தம் / புதுப்பிப்பு",download:"பதிவிறக்கம்",status:"நிலையைச் சரிபார்க்க",site:"அதிகாரப்பூர்வ இணையதளம்",na:"அதிகாரப்பூர்வ இணைப்பு இன்னும் இல்லை",all:"அனைத்தும்",res:"சேவைகள்",none:"சேவைகள் எதுவும் இல்லை."},
+te:{h1:"అన్ని ప్రభుత్వ సేవలు ఒకే చోట",sub:"ధృవీకరించిన అధికారిక పోర్టల్‌ల ద్వారా పత్రాలకు దరఖాస్తు చేయండి, సర్టిఫికెట్లు డౌన్‌లోడ్ చేయండి, దరఖాస్తు స్థితిని తనిఖీ చేయండి మరియు ప్రభుత్వ పథకాలను పొందండి.",n_all:"అన్ని సేవలు",n_docs:"పత్రాలు",n_sch:"ప్రభుత్వ పథకాలు",n_state:"రాష్ట్ర సేవలు",n_about:"మా గురించి",apply:"ఆన్‌లైన్ దరఖాస్తు",correct:"సవరణ / అప్‌డేట్",download:"డౌన్‌లోడ్",status:"స్థితి తనిఖీ",site:"అధికారిక వెబ్‌సైట్",na:"అధికారిక లింక్ ఇంకా అందుబాటులో లేదు",all:"అన్నీ",res:"సేవలు",none:"సేవలు ఏవీ కనబడలేదు."},
+ur:{h1:"تمام سرکاری خدمات ایک ہی جگہ",sub:"تصدیق شدہ سرکاری پورٹلز کے ذریعے دستاویزات کے لیے درخواست دیں، سرٹیفکیٹ ڈاؤن لوڈ کریں، درخواست کی حیثیت دیکھیں اور سرکاری اسکیموں تک رسائی حاصل کریں۔",n_all:"تمام خدمات",n_docs:"دستاویزات",n_sch:"سرکاری اسکیمیں",n_state:"ریاستی خدمات",n_about:"ہمارے بارے میں",apply:"آن لائن درخواست",correct:"درستی / اپ ڈیٹ",download:"ڈاؤن لوڈ",status:"حیثیت دیکھیں",site:"سرکاری ویب سائٹ",na:"سرکاری لنک ابھی دستیاب نہیں",all:"تمام",res:"خدمات",none:"کوئی خدمت نہیں ملی۔"}};
+let L="en",S={q:"",cat:"",st:"",dept:"",sort:"az"};
+const $=id=>document.getElementById(id),t=k=>T[L][k]||T.en[k];
+const uniq=k=>[...new Set(D.map(d=>d[k]))].sort();
+function fill(id,vals){const el=$(id),cur=el.value;el.innerHTML=`<option value="">${t("all")}</option>`+vals.map(v=>`<option>${v}</option>`).join("");el.value=cur}
+function opts(){fill("cat",uniq("cat"));fill("st",STATES.concat("All India"));fill("dept",uniq("dept"))}
+function btn(u,k,p){return u?`<a class="${p?"p":""}" href="${u}" target="_blank" rel="noopener noreferrer">${t(k)}</a>`:""}
+function render(){
+const q=S.q.trim().toLowerCase();
+let r=D.filter(d=>(!S.cat||d.cat===S.cat)&&(!S.st||d.state===S.st||d.state==="All India"&&S.st==="All India")&&(!S.dept||d.dept===S.dept)&&(!q||[d.name,d.cat,d.state,d.dept,d.desc].join(" ").toLowerCase().includes(q)));
+r.sort((a,b)=>a.name.localeCompare(b.name)*(S.sort==="az"?1:-1));
+$("count").textContent=r.length+" "+t("res");
+$("list").innerHTML=r.length?r.map(d=>{const u=d.urls,any=u.apply||u.correct||u.download||u.status||d.src;
+return `<article class="card"><div class="meta"><span class="tag">${d.cat}</span><span class="tag">${d.state}</span></div><h3>${d.name}</h3><p>${d.desc}</p><div class="vs">${d.dept}</div><div class="bt">${btn(u.apply,"apply",1)}${btn(u.correct,"correct")}${btn(u.download,"download")}${btn(u.status,"status")}${btn(d.src,"site")}</div>${any?"":`<div class="na">${t("na")}</div>`}<div class="vs">${t("ver")}</div></article>`}).join(""):`<div class="empty">${t("none")}</div>`}
+function i18n(){document.documentElement.lang=L;document.documentElement.dir=L==="ur"?"rtl":"ltr";document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));opts();render();stmsg()}
+function stmsg(){const s=S.st;$("stmsg").textContent=s?(D.some(d=>d.state===s)?s+": "+D.filter(d=>d.state===s).length+" "+t("res"):s+": "+t("stm")):t("stm")}
+["Aadhaar Card","PAN Card","Voter ID","Driving Licence","Ration Card","Passport"].forEach(p=>{const b=document.createElement("button");b.className="chip";b.textContent=p;b.onclick=()=>{$("q").value=p.replace(" Card","").replace(" ID","");S.q=$("q").value;render();$("services").scrollIntoView()};$("pop").append(b)});
+STATES.forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.onclick=()=>{S.st=S.st===s?"":s;$("st").value=S.st;document.querySelectorAll("#states .chip").forEach(c=>c.classList.toggle("on",c.textContent===S.st));render();stmsg()};$("states").append(b)});
+$("q").oninput=e=>{S.q=e.target.value;render()};
+["cat","st","dept","sort"].forEach(k=>$(k).onchange=e=>{S[k]=e.target.value;if(k==="st"){document.querySelectorAll("#states .chip").forEach(c=>c.classList.toggle("on",c.textContent===S.st));stmsg()}render()});
+$("lang").onchange=e=>{L=e.target.value;i18n()};
+$("theme").onclick=()=>{const r=document.documentElement,d=r.dataset.theme==="dark"||(!r.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark"};
+// ---- Google AdSense (owner: paste your own IDs below; leave empty to show no ads) ----
+const ADS={client:"",slot:""}; // e.g. client:"ca-pub-XXXXXXXXXXXXXXXX" from your AdSense account
+const ck={get(){try{return localStorage.getItem("gsp_ck")}catch(e){return null}},set(v){try{localStorage.setItem("gsp_ck",v)}catch(e){}}};
+function ads(){const box=$("ad1");if(!ADS.client||!ADS.slot||ck.get()!=="yes"||box.dataset.on)return;box.dataset.on=1;box.hidden=false;
+const s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+encodeURIComponent(ADS.client);document.head.append(s);
+const i=document.createElement("ins");i.className="adsbygoogle";i.style.display="block";i.dataset.adClient=ADS.client;i.dataset.adSlot=ADS.slot;i.dataset.adFormat="auto";i.dataset.fullWidthResponsive="true";box.append(i);
+try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}}
+function cb(show){$("cb").classList.toggle("show",show)}
+$("cy").onclick=()=>{ck.set("yes");cb(false);ads()};
+$("cn").onclick=()=>{ck.set("no");cb(false)};
+["cset","cset2"].forEach(id=>$(id).onclick=e=>{e.preventDefault();cb(true)});
+if(!ck.get())cb(true);else ads();
+// ---- page routing: policy pages open as their own views ----
+const PG=["about","privacy","terms","disclaimer","cookie-policy","contact"];
+document.querySelectorAll(".pol").forEach(s=>s.insertAdjacentHTML("afterbegin",'<p><a href="#top">\u2190 Home</a></p>'));
+function route(){const h=location.hash.slice(1),on=PG.includes(h);
+document.body.classList.toggle("pg",on);
+document.querySelectorAll(".pol").forEach(s=>s.classList.toggle("on",s.id===h));
+document.title=on?document.querySelector("#"+h+" h2").textContent+" \u2013 Govt Seva Portal":"Govt Seva Portal \u2013 All Government Services in One Place";
+if(on){scrollTo(0,0);return}
+if(h==="docs"||h==="schemes"){S.cat=h==="schemes"?"Government Schemes":"";$("cat").value=S.cat;render();$("services").scrollIntoView();return}
+const el=h&&document.getElementById(h);if(el)el.scrollIntoView();else scrollTo(0,0)}
+addEventListener("hashchange",route);
+i18n();route();
+</script>
+</body>
+</html>

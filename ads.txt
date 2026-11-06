@@ -1,0 +1,3 @@
+# Google AdSense ads.txt
+# After AdSense approves your site, replace this line with the one AdSense gives you, for example:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
